@@ -45,7 +45,7 @@ Los sensores de microondas usan ondas electromagnéticas para detectar objetos o
 | **GND**      | GND                             |
 
 **Codigo de ejemplo para comprobar su funcionamiento**
-[text](../codigoArduino/programaSensorMicroondas/programaSensorMicroondas.ino)
+[text](../Codigos/programaSensorMicroondas.ino)
 
 ## 4. Instalación de Sensor de Luz
 
@@ -63,7 +63,7 @@ Los sensores de luz detectan la cantidad de luz ambiental y la convierten en una
 | **GND**      | GND común                      |
 
 **Codigo de ejemplo para comprobar su funcionamiento**
-[text](../codigoArduino/programillaLuzPrueba/programillaLuzPrueba.ino)
+[text](../Codigos/programillaLuzPrueba.ino)
 
 ## 5. Instalación de Relé
 
@@ -80,7 +80,7 @@ Pasamos a la instalación del relé para cuando los sensores anteriores cumplan 
 | **VCC**      | Atribuye el sensor (3.3V o 5V) |
 
 **Codigo de ejemplo para comprobar su funcionamiento**
-[text](../codigoArduino/programaRele/programaRele.ino)
+[text](../Codigos/programaRele.ino)
 
 ## Sistema de Control Automático de Luces
 
@@ -108,4 +108,4 @@ Este sistema automatiza el encendido y apagado de las luces en un aula utilizand
    - tendremos que tener conectado todos los sensores
 
 **Codigo de ejemplo para comprobar su funcionamiento**
-[text](../codigoArduino/programaLuzYMovimiento/programaLuzYMovimiento.ino)
+[text](../Codigos/programaLuzYMovimiento.ino)
