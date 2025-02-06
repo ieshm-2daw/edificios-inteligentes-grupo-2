@@ -2,11 +2,12 @@
 
 ## 1. Introducción
 
-Este proyecto tiene como objetivo desarrollar un dispositivo domótico capaz de detectar movimiento y controlar el encendido y apagado de luces de manera automatizada. Utilizando sensores de movimiento, el sistema activará las luces cuando se detecte presencia en la zona monitoreada. Si no se detecta movimiento durante un periodo de tiempo determinado, el dispositivo apagará automáticamente las luces para optimizar el consumo energético y mejorar la eficiencia del sistema.
+Este proyecto tiene como objetivo desarrollar un dispositivo domótico capaz de detectar movimiento con el objetivo de automatizar el aula, ya sea para el encendido y apagado de electricidad o por seguridad del aula. Utilizando sensores de movimiento, el sistema automatizara el encendido de las luces cuando se detecte presencia en la zona monitoreada. Si no se detecta movimiento durante un periodo de tiempo determinado, el dispositivo apagará automáticamente las luces para optimizar el consumo energético y mejorar la eficiencia del sistema.
 
 ### Objetivo:
 
-El sistema busca optimizar el consumo de energía, asegurándose de que las luces solo se enciendan cuando realmente se necesiten (cuando la luz es insuficiente y hay personas en el aula), y se apaguen automáticamente cuando no haya nadie o cuando la luz ambiental sea suficiente para la actividad.
+El sistema busca optimizar el consumo de energía, asegurándose de que las luces solo se enciendan cuando realmente se necesiten (cuando la luz es insuficiente y hay personas en el aula), y se apaguen automáticamente cuando no haya nadie o cuando la luz ambiental sea suficiente para la actividad, y tambien mejorar la seguridad del un aula para que en caso de movimiento en horas no lectivas veamos en unos registros cuando ha habido esos movimientos, sabiendo en todo momento la hora exacta en la que ocurre cada
+regitro.
 
 ## 2. Materiales Necesarios
 
@@ -34,15 +35,44 @@ Una vez instalador del entorno de desarrollo ya podemos programar nuestra esp32 
 
 Los sensores de microondas usan ondas electromagnéticas para detectar objetos o movimientos, sin necesidad de contacto. Funcionan analizando cómo las ondas rebotan o cambian al interactuar con algo. Son muy útiles porque pueden detectar cosas a través de materiales como plástico y madera, y funcionan bien en ambientes difíciles (como con polvo o humedad). Sin embargo, pueden ser más caros que otros sensores y pueden tener problemas con **interferencias**.
 
+## Datos de Interés sobre el Sensor de Microondas
+
+### Características Generales
+
+- **Tipo de sensor:** Microondas
+- **Frecuencia de operación:** 10 GHz - 24 GHz (dependiendo del modelo)
+- **Consumo de energía:** Bajo consumo, generalmente entre 1-3W
+- **Modo de detección:** Basado en efecto Doppler
+
+### Datos de Alcance y Cobertura
+
+- **Distancia de detección:** Hasta 30 metros (dependiendo de la potencia y el entorno)
+- **Rango perimetral:** 360° en algunos modelos, 120° - 180° en modelos direccionados
+- **Altura recomendada de instalación:** 2 - 5 metros
+
+### Condiciones de Funcionamiento
+
+- **Temperatura de operación:** -20°C a 60°C
+- **Humedad relativa:** 0% - 95%
+- **Resistencia a interferencias:** Alta resistencia a cambios lumínicos y condiciones climáticas adversas
+
+### Notas Adicionales
+
+- Puede atravesar materiales no metálicos como plástico, vidrio o madera
+- No es afectado por condiciones de luz como sensores PIR
+- Compatible con sistemas domóticos y de automatización
+
 ### Conectividad con ESP32
 
-![alt text](./imagenes/image-1.png)
+![alt text](./imagenes/image-4.png)
 
-| **Conexión** | **Descripción**                 |
-| ------------ | ------------------------------- |
-| **VIN**      | Vcc                             |
-| **OUT**      | Cualquier puerto de información |
-| **GND**      | GND                             |
+| **Conexión** | **Descripción**                   |
+| ------------ | --------------------------------- |
+| **3v3**      | No conectar (salida de corriente) |
+| **VIN**      | Vcc (Entrada de corriente 5V)     |
+| **OUT**      | Cualquier puerto de información   |
+| **GND**      | GND (toma de tierra)              |
+| **CDS**      | No conectar (para añadir un LDS)  |
 
 **Codigo de ejemplo para comprobar su funcionamiento**
 [Enlace](./Codigos/programaSensorMicroondas.ino)

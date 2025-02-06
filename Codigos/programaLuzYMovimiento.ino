@@ -2,15 +2,17 @@
 #include <PubSubClient.h>
 
 // Configuración de la red Wi-Fi
-const char* ssid = "2DAW_IoT";
-const char* password = "Somos2DAW";
+const char* ssid = "ssid WIFI";
+const char* password = "contraseña WIFI";
 
 // Configuración del MQTT
-const char* mqtt_server = "ha.ieshm.org";
-const int mqtt_port = 1883;
-const char* mqtt_client_id = "relay_mqtt";
-const char* mqtt_user = "mqtt";      // Reemplaza con el usuario de tu broker MQTT
-const char* mqtt_password = "mqtt"; // Reemplaza con la contraseña de tu broker MQTT
+const char* mqtt_server = "dominio del MQTT";
+const int mqtt_port = "puerto (xxxx)";
+const char* mqtt_client_id = "id sensor Mqtt";
+const char* mqtt_user = "usuario mqtt";
+const char* mqtt_password = "password mqtt";
+
+const char* mqtt_topic_log = "g2/microondas";
 
 const char* mqtt_topic_relay = "esp32/relay";
 const char* mqtt_topic_log = "g2/microondas";
